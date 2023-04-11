@@ -1,0 +1,44 @@
+.radio-input-container {
+
+	margin-right: 10px;
+  height: 30px;
+  background-color: rgb(203, 203, 203);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  padding:  10px  15px 10px 5px;
+  width: 100px;
+box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.275);
+transition: all 0.3s ease;
+}
+.radio-input-container:active {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+}
+
+.radio-input-container input[type=radio] {
+	display: none;
+}
+
+
+
+.radio-input-label {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(55, 52, 52);
+  margin-left: 5px;
+}
+
+
+
+.radio-input {
+  cursor: pointer;
+
+}
+
+.active {
+  background-color: rgb(56, 176, 197);
+}
+

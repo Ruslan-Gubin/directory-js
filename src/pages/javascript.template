@@ -1,0 +1,2 @@
+<nav-header type="javascript"></nav-header>
+<posts-list category="javascript" search="${props.query || ''}" name="${props.name || ''}"></posts-list>

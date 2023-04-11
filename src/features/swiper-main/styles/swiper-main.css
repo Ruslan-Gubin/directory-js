@@ -1,0 +1,34 @@
+.swiper-active-root {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.swiper-active-img {
+  width: 100%;
+border-radius: 10px;
+}
+
+
+
+
+.swiper-image-list {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.swiper-list-img {
+width: 80px;
+height: 80px;
+margin: 0 10px;
+border: 3px solid rgba(255, 0, 0, 0);
+border-radius: 10px;
+}
+
+.active {
+  border: 3px solid rgb(5, 176, 159);
+}
+

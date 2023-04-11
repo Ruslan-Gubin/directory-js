@@ -1,0 +1,27 @@
+.post-title {
+  color: #545454;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.title-small {
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 10px 0;
+  width: 170px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 15px;
+  color: rgb(90, 86, 86);
+}
+
+.big {
+  font-size: 1.8rem;
+  font-weight: 800;
+}

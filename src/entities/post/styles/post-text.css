@@ -1,0 +1,48 @@
+.text-small {
+  font-size: 1rem; 
+  color: #333539;
+  font-weight: 600;
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-big {
+  white-space: pre-wrap;
+  font-size: 1.2rem; 
+  color: #d1d1d1;
+  background-color: rgb(53, 48, 48);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+@media (min-width: 1700px) {
+  .text-small {
+    width: 380px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .text-small {
+    width: 260px;
+  }
+}
+
+@media (max-width: 850px) {
+  .text-small {
+    width: 150px;
+  }
+
+}
+@media (max-width: 650px) {
+  .text-small {
+    width: 110px;
+  }
+
+}
+
+.orange {
+  color: rgb(222, 176, 91);
+}

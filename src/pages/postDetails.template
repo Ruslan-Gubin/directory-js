@@ -1,0 +1,2 @@
+<nav-header ></nav-header>
+<post-details id="${props.id || ''}" ></post-details>

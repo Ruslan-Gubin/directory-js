@@ -1,0 +1,2 @@
+<nav-header type="react"></nav-header>
+<posts-list category="reactjs" search="${props.query || ''}" name="${props.name || ''}"></posts-list>

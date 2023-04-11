@@ -1,0 +1,8 @@
+.radio-inputs-container {
+
+  border-radius: 10px;
+  width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+padding: 15px 0;
+}
