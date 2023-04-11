@@ -5,7 +5,7 @@ import TemplateLoader from './plugins/vite-template-plugin';
 export default defineConfig({
     build: {
         target: 'es2015',
-        outDir: 'build',
+        outDir: 'dist',
     },
     server: {
         port: 3000,
