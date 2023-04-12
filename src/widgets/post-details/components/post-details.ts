@@ -41,7 +41,7 @@ class PostDetails extends HTMLElement {
     postTitle.setAttribute('size', 'big')
     this.root.insertAdjacentElement("beforeend", postTitle);
     
-    
+    console.log(this.post)
     const images = this.post.image.map((item) => item.url);
     this.postSwiper.renderImages(images);
     this.root.insertAdjacentElement("beforeend", this.postSwiper);
