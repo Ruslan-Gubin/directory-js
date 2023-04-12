@@ -6,7 +6,7 @@ import { BACKEND_URL } from "../constants/urlServer";
 
 const apiServer = BACKEND_URL
 
-console.log(apiServer)
+
 const baseFetch = <T>(url: string, config = {}, params?: {}): Promise<T> => {
   return new Promise((resolve, reject) => {
       try{
