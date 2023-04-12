@@ -10,7 +10,7 @@ class PostDetails extends HTMLElement {
   root: HTMLDivElement;
   postId: string;
   post: IPost;
-// pre text 64355048dc6e0bfb96731847
+
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: "open" });
@@ -81,8 +81,6 @@ class PostDetails extends HTMLElement {
     removePostId(removeReuestOptions)
     .then(response => {
       if (response) {
-
-        console.log(response)
         goTo(`/`)
       }
     })

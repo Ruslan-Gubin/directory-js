@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import TemplateLoader from './plugins/vite-template-plugin';
 
+
 export default defineConfig({
     build: {
         target: 'es2015',

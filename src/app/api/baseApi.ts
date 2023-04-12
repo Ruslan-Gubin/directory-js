@@ -1,4 +1,5 @@
-const apiServer = import.meta.env.DEV ? 'http://localhost:4444/api' : 'http://localhost:4444';
+const apiServer = 'https://web-compomponents.onrender.com/api';
+// const apiServer = import.meta.env.DEV ? 'http://localhost:4444/api' : 'http://localhost:4444';
 
 const baseFetch = <T>(url: string, config = {}, params?: {}): Promise<T> => {
   return new Promise((resolve, reject) => {
