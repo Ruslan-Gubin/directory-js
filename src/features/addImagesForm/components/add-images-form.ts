@@ -40,7 +40,7 @@ class AddImagesForm extends HTMLElement {
   }
 
   /** добавляем img */
-addImages(e) {
+ addImages(e) {
   const file: File = e.target.files ? e.target.files[0] : false;
   const name = file.name
   const checkAlt = this.imagesAlt.some(item => item === name)
@@ -50,7 +50,6 @@ addImages(e) {
   render.onloadend = () => {
     if (render.result) {
       const img: string =  String(render.result)
-      this.imagesAlt.push(name)
       this.addImagesDom(img, name)
     }
   }
@@ -62,7 +61,7 @@ getWrapper() {
   return shadow.querySelector('.create-post-files')
 }
 
-/** работа с img удаляем изображение */
+/** удаляем изображение */
 removeImage(element: Element, alt: string) {
   const imagesElements = this.getWrapper()
   imagesElements.removeChild(element)
@@ -77,6 +76,7 @@ addImagesDom(src: string, alt: string) {
   newImage.setAttribute('src', `${src}`)
   newImage.setAttribute('alt', `${alt}`)
   images.insertAdjacentElement('afterbegin', newImage)
+  this.imagesAlt.push(alt)
   this.checkImageCount()
 }
 

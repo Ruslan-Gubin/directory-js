@@ -1,10 +1,14 @@
 .nav-header {
-  background-color: rgba(175, 168, 168, 0.181);
+  background-color: rgb(112, 196, 200);
   height: 70px;
   display: flex;
   align-items: center; 
   border-bottom: 3px solid #837b7b2d;
   margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .input-search-block {
@@ -28,12 +32,17 @@ search-glass {
   }
   .input-search-block {
     margin-left: 50px;
+    margin-top: 30px;
   }
 
   search-glass {
   position: relative;
   right: 35px;
   top: 6px;
+  }
+  .nav-header {
+    height: 110px;
+    padding-top: 10px;
   }
 }
 

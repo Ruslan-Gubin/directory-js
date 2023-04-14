@@ -36,7 +36,7 @@ class InputMain extends HTMLElement {
   }
 
   static  get observedAttributes() {
-    return ['label', 'name', 'type', 'id', 'size', 'error'];
+    return ['label', 'name', 'type', 'id', 'size', 'error', 'valueText'];
   }
 
   attributeChangedCallback(name: string, oldValue: string, newValue: string) {
@@ -62,6 +62,12 @@ class InputMain extends HTMLElement {
         break;
       case "error":
         this.updateErrorAttribute(newValue)
+        break;
+      case "valueText":
+        // this.input.value = newValue
+        // this.label.innerHTML = newValue
+        console.log(newValue)
+        // this.render()
         break;
     }
 

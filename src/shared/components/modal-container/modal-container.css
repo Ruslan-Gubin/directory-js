@@ -1,0 +1,30 @@
+.root {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.189);
+  background-color: rgb(243, 243, 243);
+}
+
+@media (max-width: 820px) {
+  .root {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 700px) {
+  .root {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
+pre {
+  white-space: pre-line;
+}

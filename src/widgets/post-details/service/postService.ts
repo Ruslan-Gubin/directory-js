@@ -1,24 +1,25 @@
+import { CashResponse } from "../../../app/service/cashResponse";
 import { IPost } from "../../../app/types/IPost";
 import { getPostById } from "../api/getPostId";
 
-const postsDetailsCash = new Map();
 
-const setPostCash = (id: string, data: IPost) => {
-  postsDetailsCash.set(id, data);
-};
-
-const getPostCash = (id: string) => {
-  return postsDetailsCash.get(id);
-};
-
-const getPostIdCash = async (id: string) => {
-  if (postsDetailsCash.has(id)) {
-    return getPostCash(id);
-  } else {
-    const post = await getPostById(id);
-    setPostCash(id, post);
-    return post;
+class PostDetailCash extends CashResponse<IPost> {
+  constructor() {
+    super(new Map())
   }
-};
 
-export { getPostIdCash };
+  async getPostIdCash(id: string) {
+    if (this.cash.has(id)) {
+      return this.getItemCash(id);
+    } else {
+      const post = await getPostById(id);
+      this.setItemCash(id, post);
+      return post;
+    }
+  };
+
+}
+
+const postCash = new PostDetailCash()
+
+export { postCash }

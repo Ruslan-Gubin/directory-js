@@ -1,2 +1,2 @@
 <nav-header type="javascript"></nav-header>
-<p>Home Page</p>
+<about-home></about-home>

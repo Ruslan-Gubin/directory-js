@@ -3,6 +3,7 @@ interface IbodyOptions {
   title: string;
   text: string;
   images: string[];
+  id?: string;
 }
 
 export type { IbodyOptions };

@@ -6,3 +6,4 @@ import './main-button/main-button';
 import './input-main/input-main';
 import './textarea-main/textarea-main';
 import './radio-input/radio-input';
+import './modal-container/modal-container';

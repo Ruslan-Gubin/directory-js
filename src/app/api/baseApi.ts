@@ -1,6 +1,3 @@
-// const apiServer = 'https://web-compomponents.onrender.com/api';
-// const apiServer = import.meta.env.DEV ? 'http://localhost:4444/api' : 'http://localhost:4444';
-
 import { BACKEND_URL } from "../constants/urlServer";
 
 

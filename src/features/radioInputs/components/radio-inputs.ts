@@ -19,7 +19,7 @@ class RadioInputs extends HTMLElement {
     shadow.append(createConteiner);
 
     this.radioButtons = []
-    this.value = null
+    this.value = ''
 
     this.container = shadow.querySelector(".radio-inputs-container");
   }

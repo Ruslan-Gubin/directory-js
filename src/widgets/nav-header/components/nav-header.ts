@@ -1,12 +1,14 @@
 import appConstants from "../../../app/constants/appConstants";
 import { routes } from "../../../app/providers/routesWithPages";
-import { goTo } from "../../../app/router";
+import { getRouterParams, goTo } from "../../../app/router";
 import { LINKS } from "../constants/links";
 import { navHeaderTemplate } from "../template/nav-header-template";
 import styles from "../styles/nav-header-styles.css?inline";
 
 class NavHeader extends HTMLElement {
   searchType: string;
+  searchInput
+  params: string;
 
   constructor() {
     super();
@@ -14,6 +16,11 @@ class NavHeader extends HTMLElement {
     const template = navHeaderTemplate.content.cloneNode(true);
     this.searchType = appConstants.search.types.javascript;
     const style = document.createElement("style");
+ 
+    this.searchInput = document.createElement('input-search')
+
+    const params: any = getRouterParams()
+    this.params = params.route.spec
 
     style.textContent = styles;
     shadow.append(style);
@@ -22,15 +29,17 @@ class NavHeader extends HTMLElement {
 
   updatePlaceholder() {
     const shadow = this.shadowRoot;
-    const input = shadow.querySelector("input-search");
-    input.setAttribute("placeholder", `Search ${this.searchType}...`);
+    const inputBlock = shadow.querySelector('.input-search-block')
+
+    if (this.params === '/javascript' || this.params === '/reactjs' || this.params === '/functions'){
+      inputBlock.insertAdjacentElement('afterbegin', this.searchInput)
+      this.searchInput.setAttribute("placeholder", `Search ${this.searchType}...`);
+    }
   }
 
   render() {
     const shadow = this.shadowRoot;
-    const wrapper = shadow.querySelector(".nav-header");
-    const shadowInput = shadow.querySelector("input-search").shadowRoot;
-    const input = shadowInput.querySelector("input");
+    const input = this.searchInput.shadowRoot.querySelector("input");
     const searchGlass = shadow.querySelector("search-glass").shadowRoot;
     const searchButton = searchGlass.querySelector(".search-glass");
 

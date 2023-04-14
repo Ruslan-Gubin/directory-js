@@ -34,7 +34,7 @@ class TextareaMain extends HTMLElement {
   }
 
   static  get observedAttributes() {
-    return ['label', 'name', 'id', 'size', 'error'];
+    return ['label', 'name', 'id', 'size', 'error', 'valueText'];
   }
 
   attributeChangedCallback(name: string, oldValue: string, newValue: string) {
@@ -56,6 +56,10 @@ class TextareaMain extends HTMLElement {
         break;
       case "error":
         this.updateErrorAttribute(newValue)
+        break;
+      case "valueText":
+        this.label.innerHTML = newValue
+        console.log('11111111')
         break;
     }
   }

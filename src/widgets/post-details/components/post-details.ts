@@ -1,7 +1,8 @@
 import { goTo } from "../../../app/router";
 import { IPost } from "../../../app/types/IPost";
+import { findAndDeletePostId } from "../../posts-list/service/posts";
 import { removePostId } from "../api/removePostId";
-import { getPostIdCash } from "../service/postService";
+import { postCash } from "../service/postService";
 import styles from "../styles/post-details.css?inline";
 
 class PostDetails extends HTMLElement {
@@ -29,11 +30,8 @@ class PostDetails extends HTMLElement {
   }
 
   async render() {
-    this.post = await getPostIdCash(this.postId);
+    this.post = await postCash.getPostIdCash(this.postId);
  
-    const postButtons = document.createElement('post-buttons')
-    const buttonContainer = postButtons.shadowRoot.querySelector('.post-buttons-container')
-    this.root.insertAdjacentElement("beforeend", postButtons);
     
     
     const postTitle = document.createElement('post-title')
@@ -41,7 +39,7 @@ class PostDetails extends HTMLElement {
     postTitle.setAttribute('size', 'big')
     this.root.insertAdjacentElement("beforeend", postTitle);
     
-    console.log(this.post)
+    
     const images = this.post.image.map((item) => item.url);
     this.postSwiper.renderImages(images);
     this.root.insertAdjacentElement("beforeend", this.postSwiper);
@@ -51,7 +49,10 @@ class PostDetails extends HTMLElement {
     postText.setAttribute('text', `${this.post.text}`)
     postText.setAttribute('size', 'big')
     this.root.insertAdjacentElement("beforeend", postText);
-
+    
+    const postButtons = document.createElement('post-buttons')
+    const buttonContainer = postButtons.shadowRoot.querySelector('.post-buttons-container')
+    this.root.insertAdjacentElement("beforeend", postButtons);
    
     Array.from(buttonContainer.children).forEach(btn => {
       switch(btn.getAttribute('text')) {
@@ -69,18 +70,35 @@ class PostDetails extends HTMLElement {
 
   updateClickPost(e: MouseEvent) {
     e.preventDefault()
+
+    const createPostElement: any = document.createElement('create-post')
+
+    const updateOptions = {
+      id: this.post._id,
+      title: this.post.title,
+      text: this.post.text,
+      image: this.post.image,
+      category: this.post.category,
+    }
+    
+    window.sessionStorage.setItem('updatePost', JSON.stringify(updateOptions))
     goTo(`/create`)
+    // createPostElement.setPropsPostUpdate(updateOptions)
   }
 
   removeClickPost(e: MouseEvent) {
     e.preventDefault()
+    
     const removeReuestOptions = {
       id: this.postId,
       images: this.post.image.map(item => item.public_id)
     }
+    
     removePostId(removeReuestOptions)
     .then(response => {
       if (response) {
+        postCash.deleteItemCash(this.postId)
+        findAndDeletePostId(this.postId)
         goTo(`/`)
       }
     })

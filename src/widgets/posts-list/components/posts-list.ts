@@ -5,6 +5,7 @@ import { getCategoryPosts } from "../api/getSearchPostsApi"
 import { getPostCash,  postsCategory,  setPostCash } from "../service/posts"
 import { IPostListAttribute } from "../types/IPostListAttribute"
 import { postsListTemplate } from "../template/posts-list-template"
+
 import styles from '../style/posts-list-styles.css?inline';
 
 
@@ -28,8 +29,13 @@ class PostList extends HTMLElement {
     const shadow = this.shadowRoot
     const ulElement = shadow.querySelector('.posts-list-container')
     const buttonAddPost = shadow.querySelector('main-button')
-    
-    buttonAddPost.addEventListener('click', () => goTo('/create'))
+    const buttonElement = buttonAddPost.shadowRoot.querySelector('.main-button')
+   
+    buttonElement.addEventListener('click', (e: MouseEvent) => {
+      e.stopPropagation()
+    sessionStorage.removeItem('updatePost')
+      goTo('/create')
+    })
 
     const { category } = getAllAtribute<IPostListAttribute>(this, 'category')
 

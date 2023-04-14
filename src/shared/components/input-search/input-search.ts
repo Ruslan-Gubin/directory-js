@@ -27,6 +27,7 @@ class InputSearch extends HTMLElement {
       e.preventDefault()
       input.classList.add('active')
     })
+    
     input.addEventListener('blur', (e: FocusEvent) => {
       e.preventDefault()
       input.classList.remove('active')

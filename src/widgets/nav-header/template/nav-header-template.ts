@@ -2,6 +2,7 @@ import { LINKS } from "../constants/links"
 
 const navHeaderTemplate = document.createElement('template')
 
+// <input-search></input-search>
 navHeaderTemplate.innerHTML = `
 <div class='nav-header'>
 <ul class='nav-header-links'>
@@ -10,7 +11,6 @@ ${ LINKS.map(link => {
 }).join('')}
 </ul>
 <section class='input-search-block'>
-<input-search></input-search>
 <search-glass></search-glass>
 </section>
 </div>

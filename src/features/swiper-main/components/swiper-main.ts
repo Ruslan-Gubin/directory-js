@@ -31,15 +31,15 @@ class SwiperMain extends HTMLElement {
     if ( !this.activeImageRoot.getAttribute('active-id')) {
       this.setActiveImage({img: this.images[0].img, id: this.images[0].id})
     }
-   
-      this.insertImagesList()
-      this.root.insertAdjacentElement('beforeend', this.activeImageRoot)
-      this.root.insertAdjacentElement('beforeend', this.imageList)
-
-      Array.from(this.imageList.children).forEach((img: HTMLImageElement,_, imagesArray) => {
-        img.addEventListener('mouseenter', (e: MouseEvent) => this.changeActiveImg(e, img, imagesArray))
-      })
-     
+    
+    this.insertImagesList()
+    this.root.insertAdjacentElement('beforeend', this.imageList)
+    this.root.insertAdjacentElement('beforeend', this.activeImageRoot)
+    
+    Array.from(this.imageList.children).forEach((img: HTMLImageElement,_, imagesArray) => {
+      img.addEventListener('mouseenter', (e: MouseEvent) => this.changeActiveImg(e, img, imagesArray))
+    })
+    
   }
 
  private changeActiveImg(e: MouseEvent, currentImage: HTMLImageElement, imagesArray) {
