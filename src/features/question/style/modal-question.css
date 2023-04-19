@@ -1,0 +1,14 @@
+.wrapper {
+
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+/* align-items: center; */
+
+
+  /* background-color: rgb(242, 242, 242); */
+/* padding: 15px; */
+/* border-radius: 15px; */
+/* border: 1px solid black; */
+padding:0 50px ;
+}

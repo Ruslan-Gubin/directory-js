@@ -31,3 +31,9 @@
   background-color: #6780E8;
   
 }
+
+@media (max-width: 750px) {
+  .main-button {
+   margin-bottom: 10px;
+  }
+}
