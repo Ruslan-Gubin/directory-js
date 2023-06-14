@@ -6,11 +6,19 @@ https://web-components-wine.vercel.app/
 
 JS Notes - онлайн-сервис для создания и обмена заметками о работе с JavaScript.
      
-## Используемые технологии
+## Фронтенд
 
-Фронтенд: Vanilla JS (TypeScript) с Web Components и Vite в качестве сборщика.
+<img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686751143/git-hub-img/typescript-min_brr6dq.png" width="60" height="40"> Vanilla JS (TypeScript) с Web Components
 
-Бэкенд: Node.js с MongoDB в качестве базы данных. Репозиторий сервера можно найти [здесь](https://github.com/Ruslan-Gubin/direcroty-backend/tree/master).
+<img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686754238/git-hub-img/i_gdx3me.webp" width="60" height="40">  Vite в качестве сборщика.
+
+## Backend
+
+<img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686752638/git-hub-img/aa338729c619d2f77820cf1903f542e7_f8wknh.jpg" width="60" height="40">  NodeJS - серверная среда выполнения JavaScript.
+
+<img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686752714/git-hub-img/60854458c4d1acdf4e1c2f79c4137142d85d78e379bdafbd69bd34c85f5819ad_cteboh.jpg" width="60" height="40"> MongoDB - NoSQL база данных.
+
+Репозиторий сервера можно найти [здесь](https://github.com/Ruslan-Gubin/direcroty-backend/tree/master).
 
 ## Особенности
 
