@@ -16,7 +16,7 @@ JS Notes - онлайн-сервис для создания и обмена з�
 
 <img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686752638/git-hub-img/aa338729c619d2f77820cf1903f542e7_f8wknh.jpg" width="60" height="40">  NodeJS - серверная среда выполнения JavaScript.
 
-<img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686752714/git-hub-img/60854458c4d1acdf4e1c2f79c4137142d85d78e379bdafbd69bd34c85f5819ad_cteboh.jpg" width="60" height="40"> MongoDB - NoSQL база данных.
+<img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp; MongoDB - NoSQL база данных.
 
 Репозиторий сервера можно найти [здесь](https://github.com/Ruslan-Gubin/direcroty-backend/tree/master).
 
